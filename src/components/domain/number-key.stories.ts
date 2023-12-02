@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { NumberKey } from "./number-key";
 
-const meta: Meta<typeof NumberKey> = {
+const meta = {
   title: "Domain/NumberKey",
   component: NumberKey,
   argTypes: {
