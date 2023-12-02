@@ -1,4 +1,7 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
+import { ThemeProvider } from "../src/components/theme-provider";
+import "../src/styles.css";
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +13,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
 };
 
 export default preview;
